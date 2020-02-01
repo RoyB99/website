@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<meta charset="utf-8">
+	<title>Portfolio</title>
+	<link rel='icon' href='Ltools.ico'>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel='stylesheet' href='css/general.css' />
+	<link rel='stylesheet' href='css/Portfolio.css' />
+</head>
+<script>
+function active(x) {
+	changeMenuIconClass(x);
+	changeNav();
+}
+function changeMenuIconClass(x) {
+  x.classList.toggle("change");
+}
+function changeNav() {
+	$('#nav')[0].classList.toggle("changeNav");
+}
+if(localStorage.getItem('theme') == 'dark') {
+	document.documentElement.style.setProperty('--secondaryColor','#030303');
+	document.documentElement.style.setProperty('--mainColor','white');
+}
+</script>
+</script>
+<body>
+	<header>
+		<div id='top' class='top' >
+			<div class='container'>
+				<!--<div class='switchMode' >
+					<label id='switch' class='switch'>
+						<input type='checkbox' id='checkbox'>
+						<span class='slider'></span>
+					</label>
+					<span class='switch_text'>
+						Dark Mode
+					</span>
+				</div>-->
+				<div id='logo_holder' class='logo_holder' >
+					<a href='About.html' >
+						<svg class='logo' viewBox="0 0 50 50">
+							<path fill='#000000' d='M 4,0 4,45 12,45 12,0 Z M 12,45 12,37 49,37 42,45 Z M 4,39 0,45 4,45 Z' />
+							<g transform='translate(0.000000,29.000000) scale(0.100000,-0.100000)' fill='#000000' stroke='none'>
+								<path class='logo_img' d="M 155,208 c0 -6 7 -12 15 -16 8 -3 15 -13 15 -22 0 -10 -5 -14 -15 -10
+								-8 3 -22 9 -30 12 -8 3 -15 1 -15 -6 0 -18 20 -50 31 -50 6 0 26 -7 45 -16 32
+								-15 33 -17 17 -40 -8 -13 -21 -24 -27 -24 -23 0 -68 -57 -64 -81 7 -51 85 -23
+								109 39 5 12 15 22 24 22 8 0 15 6 15 13 1 15 39 -34 40 -50 0 -22 39 -53 65
+								-53 30 0 33 23 5 36 -13 6 -17 13 -11 23 7 10 13 11 30 2 18 -10 21 -9 21 7 0
+								24 -16 38 -52 47 -15 4 -35 16 -44 27 -18 19 -17 21 35 69 49 45 59 68 34 76
+								-5 2 -33 -20 -61 -49 -50 -51 -51 -52 -72 -33 -11 10 -24 32 -28 49 -7 27 -13
+								31 -45 34 -20 2 -37 -1 -37 -6z"/>
+							</g>
+						</svg>
+					</a>
+				</div>
+				<div id='top_nav' class='top_nav'>
+					<ul>
+						<li><a href='About.html' >About</a></li>
+						<li><a class='active' href='Portfolio.html'>Portfolio</a></li>
+						<li><a href='Contact.html' >Contact</a></li>
+					</ul>
+				</div>
+				<div id='menu_icon' class='menu_icon' onclick=active(this);>
+					<div class='bar' id='bar1' > </div>
+					<div class='bar' id='bar2' > </div>
+					<div class='bar' id='bar3' > </div>
+				</div>
+				<nav id='nav'>
+					<ul>
+						<li><a href='About.html' >About</a></li>
+						<li><a class='active' href='Portfolio.html'>Portfolio</a></li>
+						<li><a class='last' href='Contact.html' >Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class='holder' ></div>
+		<article>
+			<section class='s_1'>
+				<div class='section_content'>
+					<div class='head'>
+							Developers Portfolio
+					</div>
+					<div class='content'>
+						<div class='content_head'>
+							Check out our latest software development portfolio projects.
+						</div>
+						<div class='tags' id='filters'>
+							<ul class='tags_list'>
+								<li class='tags_items' id='showAll'>
+									SHOW ALL
+								</li>
+								<li class='tags_items' id='frontEnd'>
+									FRONT-END
+								</li>
+								<li class='tags_items' id='css3'>
+									SCSS
+								</li>
+								<li class='tags_items' id='javaScript'>
+									JAVASCRIPT
+								</li>
+								<li class='tags_items' id='html5'>
+									HTML5
+								</li>
+								<li class='tags_items' id='games'>
+									GAMES
+								</li>
+								<li class='tags_items' id='python'>
+									PYTHON
+								</li>
+								<li class='tags_items' id='rust'>
+									RUST
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class='s_2'>
+				<div class='section_content'>
+					<div class='head' >
+						<span id='filter_selected'>
+							Showing all projects. Use the filter to list them by skill or technology.
+						</span>
+					</div>
+					<div class='content'>
+						<ul class='projects_list'>
+							<li class='projects_items' id='TheBoxesGame'>
+								<a href='projects/TheBoxesGame.html' target='_blank' > 
+									<div class='project_header'>
+										<span></span>	
+										<i> The Boxes Game</i>
+										<span></span>
+									</div>
+									<div class='project_main' >
+										<div class='back_img_holder' >
+											<img class='back_img' id='TheBoxesGameImg' src='projects/css/images/TheBoxesGame_Back.png' >
+										</div>
+										<div class='tags'>
+											<div>
+												<ul class='tags_list'>
+													<li class='tags_items' id='css3'>
+														SCSS
+													</li>
+													<li class='tags_items' id='javaScript'>
+														JAVASCRIPT
+													</li>
+													<li class='tags_items' id='html5'>
+														HTML5
+													</li>
+													<li class='tags_items' id='games'>
+														GAMES
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class='front_img_holder' >
+											<img class='front_img' id='TheBoxesGameImg' src='projects/css/images/TheBoxesGame_Front.png' >
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class='projects_items' id='TheBoxesGame'>
+								<a href='projects/TheBoxesGame.html' target='_blank' > 
+									<div class='project_header'>
+										<span></span>	
+										<i>The Boxes Game</i>
+										<span></span>
+									</div>
+									<div class='project_main' >
+										<div class='back_img_holder' >
+											<img class='back_img' id='TheBoxesGameImg' src='projects/css/images/TheBoxesGame_Back.png' >
+										</div>
+										<div class='tags'>
+											<div>
+												<ul class='tags_list'>
+												<li class='tags_items' id='css3'>
+														SCSS
+													</li>
+													<li class='tags_items' id='javaScript'>
+														JAVASCRIPT
+													</li>
+													<li class='tags_items' id='html5'>
+														HTML5
+													</li>
+													<li class='tags_items' id='games'>
+														GAMES
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class='front_img_holder' >
+											<img id='TheBoxesGameImg' src='projects/css/images/TheBoxesGame_Front.png' >
+										</div>
+									</div>
+									
+								</a>
+							</li>
+							<li class='projects_items' id='TheBoxesGame'>
+								<a href='projects/TheBoxesGame.html' target='_blank' > 
+									<div class='project_header'>
+										<span></span>	
+										<i>The Boxes Game</i>
+										<span></span>
+									</div>
+									<div class='project_main' >
+										<div class='back_img_holder' >
+											<img class='img' src='projects/css/images/TheBoxesGame_Back.png' >
+										</div>
+										<div class='tags'>
+											<div>
+												<ul class='tags_list'>
+												<li class='tags_items'>
+													SCSS
+												</li>
+												<li class='tags_items'>
+													JAVASCRIPT
+												</li>
+												<li class='tags_items'>
+													HTML5
+												</li>
+												<li class='tags_items'>
+													GAMES
+												</li>
+												</ul>
+											</div>
+										</div>
+										<div class='front_img_holder' >
+											<img class='front_img' src='projects/css/images/TheBoxesGame_Front.png' >
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</article>
+	</main>
+	<script>
+	/*var theme = localStorage.getItem('theme');
+	if(theme == null || theme == 'light') {
+		localStorage.setItem('theme', 'light');
+		document.documentElement.style.setProperty('--mainColor','#030303');
+		document.documentElement.style.setProperty('--secondaryColor','white');
+	}
+	else if(theme == 'dark') {
+		localStorage.setItem('theme', 'dark');
+		document.getElementById('checkbox').setAttribute('checked', 'checked');
+		document.documentElement.style.setProperty('--mainColor','white');
+		document.documentElement.style.setProperty('--secondaryColor','#030303');
+	}
+	document.getElementById('switch').addEventListener('change', function(event){
+		if(event.target.checked) {
+			document.getElementById('checkbox').setAttribute('checked', 'checked');
+			document.documentElement.style.setProperty('--mainColor','white');
+			document.documentElement.style.setProperty('--secondaryColor','#030303');
+			localStorage.setItem('theme', 'dark');
+		} 
+		else {
+			document.documentElement.style.setProperty('--mainColor','#030303');
+			document.documentElement.style.setProperty('--secondaryColor','white');
+			localStorage.setItem('theme', 'light');
+		}
+	});*/
+	<!--main-->
+	/*
+	var projects_items = document.getElementsByClassName('projects_items');
+	for (var i = 0; i < projects_items.length; i++) {
+		var item_id = projects_items[i].id;
+		document.getElementById(item_id).addEventListener('mouseover', function(event){
+			document.getElementById(item_id + 'Img').src = 'projects/css/images/' + item_id + '_Back.png';
+		}); 
+		document.getElementById(item_id).addEventListener('mouseleave', function(event){
+			document.getElementById(item_id + 'Img').src = 'projects/css/images/' + item_id + '_Front.png';
+		})
+	}*/
+	var filters = document.getElementById('filters').getElementsByClassName('tags_items');
+	var filters_dic = { 'frontEnd':'FRONT-END' , 'css3':'CSS3' , 'javaScript':'JAVASCRIPT' , 'html5':'HTML5' ,  
+						'games':'GAMES' , 'python':'PYTHON' , 'rust':'RUST'};
+						
+	for (var i = 0; i < filters.length; i++) {
+		filters[i].addEventListener('click', function(event) {
+			var project_num = 0;
+			var filter_id = event.toElement.id;
+			var project_items = document.getElementsByClassName('projects_items');
+			for (var j = 0; j < project_items.length; j++) {
+				var tags_items = project_items[j].getElementsByClassName('tags_items');
+				var found = false;
+				if(filter_id == 'showAll') {
+					var found = true;
+				} else {
+					for (var k = 0; k < tags_items.length; k++) {
+						if(tags_items[k].id == filter_id) {
+							found = true;
+							break;
+						}
+					}
+				}
+				if(found) {
+					project_items[j].style.display = "block";
+					project_num++;
+				} else {
+					project_items[j].style.display = "none";
+				}
+			}
+			if(filter_id == 'showAll') {
+				document.getElementById('filter_selected').innerHTML = 'Showing all projects. Use the filter to list them by skill or technology.'
+			} else {
+				document.getElementById('filter_selected').innerHTML = 'Showing <b>' + project_num + '</b> projects filtered by <b>' + filters_dic[filter_id] + '</b>';
+			}
+		});
+	}
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+		if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+			document.getElementById('top').style.background = 'linear-gradient(to bottom,#ffffff,#888888)';
+		} else {
+			document.getElementById('top').style.background = '';
+		}
+	}
+	document.addEventListener('click',function(e) {
+		var menu_icon = document.getElementById('menu_icon');
+		var nav_class = document.getElementById('nav').className;
+		var top_div = document.getElementById('top');
+		if(e.target != top_div && e.target != menu_icon && e.target.parentElement != menu_icon) {
+			console.log(e.target);
+			if(nav_class == 'changeNav') {
+				active(menu_icon);
+			}
+		}
+	});
+	</script>
+	<!--
+	<footer>
+		credit or something idk
+	
+	</footer> -->
+</body>
+</html>

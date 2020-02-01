@@ -1,0 +1,995 @@
+body,html{
+	background-color:white;
+	margin:0px;
+	height:100%;
+}
+/*	---------------------------------------------------------------- choose game type screen ----------------------------------------------------------------	*/
+#choose_game_type{
+	visibility: visible;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	top:0px;
+	left:0px;
+	font-family: futura;
+    font-style: italic;
+	width:100%;
+	height:100%;
+	background-color:#13b6ec;
+}
+#choose_game_type .header{
+	margin:0px;
+	text-align:center;
+	position:relative;
+	font-size:120px;
+	font-weight:bold;
+	left:0px;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+#choose_game_type .game_type_holder{
+	margin-left:auto;
+	margin-right:auto;
+	width:300px;
+}
+#choose_game_type .singleplayer{
+	position:relative;
+	margin-top:80px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:50px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+#choose_game_type .singleplayer:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+#choose_game_type .multiplayer{
+	position:relative;
+	margin-left:10px;
+	margin-right:auto;
+	margin-top:20px;
+	font-size:50px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+#choose_game_type .multiplayer:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+.esc_msg{
+	position:absolute;
+	margin:0;
+	top:90%;
+	left:41.5%;
+	size:15px;
+	color:black;
+	font-weight:600;
+}
+/*	---------------------------------------------------------------- start singleplayer game screen ----------------------------------------------------------------	*/
+#start_singleplayer{
+	visibility: hidden;
+	position:absolute;
+	margin:0px;
+	top:0px;
+	left:0px;
+	font-family: futura;
+    font-style: italic;
+	width:100%;
+	height:100%;
+	background-color:#13b6ec;
+}
+#start_singleplayer .header{
+	margin:0px;
+	text-align:center;
+	position:relative;
+	font-size:120px;
+	font-weight:bold;
+	left:0px;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+#start_singleplayer .choose_player{
+	margin:0px;
+	text-align:center;
+	position:relative;	
+	font-size:70px;
+	font-weight:bold;
+	left:0px;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+/* player 1 */
+#single_choose_player1{
+	margin:0;
+	padding:5px 5px;
+	display:block;
+	position:absolute;
+	top:40%;
+	left:24%;
+	border:dashed 3px white;
+	cursor:pointer;
+}
+#single_choose_player1 .single_p1_pic{
+	position:absolute;
+	top:13px;
+	height:30px;
+	width:30px;
+	margin:0;
+	background-color:red;
+}
+#single_choose_player1 .single_p1{
+	margin-left:50px;
+	margin-top:10px;
+	left:50px;
+	font-size:40px;
+	font-weight:700;
+	top:30%;
+}
+#single_p1_keys{
+	position:absolute;
+	margin:0px;
+	left:28.5%;
+	top:51%;
+	font-size:30px;
+	-webkit-animation:redcolorchange 15s infinite alternate;
+}
+#single_p1_up{
+	position:absolute;
+	margin:0px;
+	left:29%;
+	top:60%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#single_p1_left{
+	position:absolute;
+	margin:0px;
+	left:26%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#single_p1_down{
+	position:absolute;
+	margin:0px;
+	left:29%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-weight:600;
+	font-size:25px;
+	font-style: normal;
+	text-align:center;
+}
+#single_p1_right{
+	position:absolute;
+	margin:0px;
+	left:32%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-weight:600;
+	font-size:25px;
+	font-style: normal;
+	text-align:center;
+}
+/* player 2 */
+#single_choose_player2{
+	margin:0;
+	padding:5px 5px;
+	display:block;
+	position:absolute;
+	top:40%;
+	left:61%;
+	border:dashed 3px transparent;
+	cursor:pointer;
+}
+#single_choose_player2 .single_p2_pic{
+	position:absolute;
+	top:13px;
+	height:30px;
+	width:30px;
+	margin:0;
+	background-color:blue;
+}
+#single_choose_player2 .single_p2{
+	margin-left:50px;
+	margin-top:10px;
+	left:50px;
+	font-size:40px;
+	font-weight:700;
+	top:30%;
+}
+/*	----------------------------------------------------------------  Singleplayer Game Screen ----------------------------------------------------------------	*/
+#single_game_bar{
+	visibility:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:30px;
+	width:100%;
+	margin:0px;
+	font-size:20px;
+	font-weight:700;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color:white;
+	background-color:red;
+}
+.single_game_bar_left_side{
+	float:left;
+	height:30px;
+	width:45%;
+	background-color:auto;
+	text-align:center;
+}
+.single_game_bar_left_side p{
+	position:relative;
+	margin:4px 0px 0px 0px;
+}
+.single_game_bar_right_side{
+	float:right;
+	height:30px;
+	width:45%;
+	background-color:auto;
+	text-align:center;
+}
+.single_game_bar_right_side p{
+	position:relative;
+	margin:4px 0px 0px 0px;
+}
+/*	---------------------------------------------------------------- end singleplayer game screen ---------------------------------------------------------------- */
+#end_singleplayer{
+	visibility: hidden;
+	position:absolute;
+	margin:0px;
+	top:0px;
+	left:0px;
+	font-family: futura;
+    font-style: italic;
+	width:100%;
+	height:100%;
+	background-color:#13b6ec;
+}
+.single_header{
+	margin:0px;
+	text-align:center;
+	position:relative;
+	font-size:120px;
+	font-weight:bold;
+	left:0px;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+.single_score{
+	margin:0px;
+	top:12%;
+	text-align:center;
+	position:relative;
+	font-weight:bold;
+	font-size:70px;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+.single_end_buttons{
+	top:21%;
+	margin:0px;
+	position:relative;
+	text-align:center;
+}
+.single_play_again{
+	margin:0px;
+	position:relative;
+	text-align:center;
+	font-size:45px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.single_play_again:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+.end_single_back_button{
+	position:relative;
+	text-align:center;
+	top:20%;
+}
+.end_singleplayer_goback{
+	position:relative;
+	text-align:center;
+	font-size:45px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.end_singleplayer_goback:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+#end_singleplayer .esc_msg{
+	position:relative;
+	margin:0;
+	top:27%;
+	left:0%;
+	text-align:center;
+	size:15px;
+	color:black;
+	font-weight:600;
+}
+
+/*	---------------------------------------------------------------- start multiplayer game screen ----------------------------------------------------------------	*/
+#start_multiplayer{
+	visibility: hidden;
+	position:absolute;
+	margin:0px;
+	top:0px;
+	left:0px;
+	font-family: futura;
+    font-style: italic;
+	width:100%;
+	height:100%;
+	background-color:#13b6ec;
+}
+#start_multiplayer .header{
+	margin:0px;
+	text-align:center;
+	position:relative;
+	font-size:120px;
+	font-weight:bold;
+	left:0px;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+@-webkit-keyframes colorchange {
+      0% {
+        color: blue;
+      }
+      
+      10% {
+        color: #8e44ad;
+      }
+      
+      20% {
+        color: #1abc9c;
+      }
+      
+      30% {
+        color: #d35400;
+      }
+      
+      40% {
+        color: blue;
+      }
+      
+      50% {
+        color: #34495e;
+      }
+      
+      60% {
+        color: blue;
+      }
+	  
+      70% {
+        color: #2980b9;
+      }
+	  
+      80% {
+        color: #f1c40f;
+      }
+	  
+      90% {
+        color: #2980b9;
+      }
+	  
+      100% { 
+	  color: pink; 
+	  }
+}
+/*	start screen player 1	*/
+.p1_pic{
+	position:absolute;
+	height:30px;
+	width:30px;
+	margin:0;
+	top:30%;
+	left:20%;
+	background-color:red;
+}
+.p1{
+	position:absolute;
+	margin:0px;
+	top:30%;
+	left:24%;
+	font-size:30px;
+	font-weight:700;
+	top:30%;
+}
+.p1_name{
+	position:absolute;
+	margin:0px;
+	left:20%;
+	top:40%;
+	font-size:30px;
+	font-weight:700;
+}
+#p1name{
+	position:absolute;
+	margin:0px;
+	left:27%;
+	top:40.5%;
+	height:30px;
+	font-size:25px;
+	font-weight:700;
+	width:15%;
+	border:0px;
+	padding:0px 0px 0px 1px;
+	color:red;
+}
+#p1_keys{
+	position:absolute;
+	margin:0px;
+	left:26.5%;
+	top:51%;
+	font-size:30px;
+	-webkit-animation:redcolorchange 15s infinite alternate;
+}
+@-webkit-keyframes redcolorchange {
+      0% {
+        color:#ff6666;
+      }
+      
+      10% {
+        color: #ff4d4d;
+      }
+      
+      20% {
+        color: #ff3333;
+      }
+      
+      30% {
+        color: #ff1a1a;
+      }
+      
+      40% {
+        color: #ff0000;
+      }
+      
+      50% {
+        color: #34495e;
+      }
+      
+      60% {
+        color: #e60000;
+      }
+	  
+      70% {
+        color: #34495e;
+      }
+	  
+      80% {
+        color: #ff0000;
+      }
+	  
+      90% {
+        color: #ff1a1a;
+      }
+	  
+	  100% {
+		color: ff3333;
+	  }
+}
+#p1_up{
+	position:absolute;
+	margin:0px;
+	left:27%;
+	top:60%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#p1_left{
+	position:absolute;
+	margin:0px;
+	left:24%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#p1_down{
+	position:absolute;
+	margin:0px;
+	left:27%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-weight:600;
+	font-size:25px;
+	font-style: normal;
+	text-align:center;
+}
+#p1_right{
+	position:absolute;
+	margin:0px;
+	left:30%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px red;
+	color:red;
+	background-color:transparent;
+	font-weight:600;
+	font-size:25px;
+	font-style: normal;
+	text-align:center;
+}
+/*	start screen player 2	*/
+.p2_pic{
+	height:30px;
+	width:30px;
+	position:absolute;
+	margin:0;
+	top:30%;
+	left:60%;
+	background-color:blue;
+}
+.p2{
+	position:absolute;
+	margin:0px;
+	top:30%;
+	left:64%;
+	font-size:30px;
+	font-weight:700;
+	top:30%;
+}
+.p2_name{
+	position:absolute;
+	margin:0px;
+	left:60%;
+	top:40%;
+	font-size:30px;
+	font-weight:700;
+}
+#p2name{
+	position:absolute;
+	margin:0px;
+	left:67%;
+	top:40.5%;
+	height:30px;
+	font-size:25px;
+	font-weight:700;
+	width:15%;
+	border:0px;
+	padding:0px 0px 0px 1px;
+	color:blue;
+}
+#p2_keys{
+	position:absolute;
+	margin:0px;
+	left:66.5%;
+	top:51%;
+	font-size:30px;
+	-webkit-animation:bluecolorchange 15s infinite alternate;
+}
+@-webkit-keyframes bluecolorchange {
+      0% {
+        color: #8080ff;
+      }
+      
+      10% {
+        color: #6666ff;
+      }
+      
+      20% {
+        color: #4d4dff;
+      }
+      
+      30% {
+        color: #3333ff;
+      }
+      
+      40% {
+        color: #1a1aff;
+      }
+      
+      50% {
+        color: #0000ff;
+      }
+      
+      60% {
+        color: #0000e6;
+      }
+	  
+      70% {
+        color: #0000ff;
+      }
+	  
+	  80% {
+		 color: #1a1aff;
+	  }
+	  
+	  90% {
+        color: #3333ff;
+      }
+	  
+	  100%	{
+		color: 4d4dff;
+	  }
+}
+#p2_up{
+	position:absolute;
+	margin:0px;
+	left:67%;
+	top:60%;
+	height:30px;
+	width:30px;
+	border:solid 2px blue;
+	color:blue;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#p2_left{
+	position:absolute;
+	margin:0px;
+	left:64%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px blue;
+	color:blue;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#p2_down{
+	position:absolute;
+	margin:0px;
+	left:67%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px blue;
+	color:blue;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+#p2_right{
+	position:absolute;
+	margin:0px;
+	left:70%;
+	top:66%;
+	height:30px;
+	width:30px;
+	border:solid 2px blue;
+	color:blue;
+	background-color:transparent;
+	font-size:25px;
+	font-weight:600;
+	font-style: normal;
+	text-align:center;
+}
+/* 	screen bottom  */
+.start_multiplayer_button{
+	position:absolute;
+	left:44%;
+	top:60%;
+	font-size:50px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.start_multiplayer_button:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+.multiplayer_goback{
+	position:absolute;
+	left:44%;
+	top:70%;
+	font-size:50px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.multiplayer_goback:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+.start_multiplayer_esc{
+	position:absolute;
+	margin:0;
+	top:90%;
+	left:43%;
+	size:15px;
+	color:black;
+	font-weight:600;
+}
+/*	----------------------------------------------------------------  Multiplayer Game Screen ----------------------------------------------------------------	*/
+#game_bar{
+	visibility:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:30px;
+	width:100%;
+	margin:0px;
+	font-size:20px;
+	font-weight:700;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color:white;
+}
+/* 		player 1		*/
+#player1{
+	float:left;
+	height:30px;
+	width:45%;
+	background-color:red;
+}
+#p1_score{
+	margin:4px 0px 0px 20px;
+	float:left;
+}
+#p1_name{
+	margin:4px 0px 0px 30%;
+	float:left;
+}
+#p1_lives{
+	margin:4px 20px 0px 0px;
+	float:right;
+}
+/*		timer		*/
+#timer{
+	background-color:black;
+	height:30px;
+	color:white;
+	width:10%;
+	position:absolute;
+	left:45%;
+	margin:0px;
+	text-align:center;
+}
+#inner_timer{
+	margin:4px 0px 0px 0px;
+}
+/*		player 2		*/
+#player2{
+	float:right;
+	height:30px;
+	width:45%;
+	background-color:blue;
+}
+#p2_score{
+	margin:4px 20px 0px 0px;
+	float:right;
+}
+#p2_name{
+	margin:4px 0px 0px 30%;
+	display:block;
+	float:left;
+}
+#p2_lives{
+	margin:4px 0px 0px 20px;
+	float:left;
+}
+/*	---------------------------------------------------------------- end multiplayer game screen ---------------------------------------------------------------- */
+#end_multiplayer{
+	visibility: hidden;
+	position:absolute;
+	margin:0px;
+	top:0px;
+	left:0px;
+	font-family: futura;
+    font-style: italic;
+	width:100%;
+	height:100%;
+	background-color:#13b6ec;
+}
+.winner{
+	margin:0px;
+	position:relative;
+	font-size:55px;
+	font-weight:bold;
+	text-align:center;
+	width:100%;
+	top:2%;
+	display:block;
+	-webkit-animation:colorchange 15s infinite alternate;
+}
+#winordraw{
+	margin:0px 5% 0px 0px;
+}
+#winner_name{
+	margin:0px 5% 0px 0px;
+}
+/*	Player 1  */
+#player1_results{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:35%;
+	left:25%;
+	font-size:35px;
+	font-weight:600;
+	-webkit-animation:redcolorchange 13s infinite alternate;
+}
+#player1_name{
+	height:30px;
+	font-size:25px;
+	font-weight:700;
+	width:45%;
+	border:0px;
+	padding:0px 0px 0px 1px;
+	color:red;
+	shadow:0px;
+}
+/*	Player 2  */
+#player2_results{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:35%;
+	left:63%;
+	font-size:35px;
+	font-weight:600;
+	-webkit-animation:bluecolorchange 13s infinite alternate;
+}
+#player2_name{
+	height:30px;
+	font-size:25px;
+	font-weight:700;
+	width:45%;
+	border:0px;
+	padding:0px 0px 0px 1px;
+	color:blue;
+	shadow:0px;
+}
+/* 	screen bottom  */
+.play_again{
+	position:absolute;
+	left:40%;
+	top:66%;
+	font-size:45px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.play_again:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+.end_multiplayer_goback{
+	position:absolute;
+	left:43.8%;
+	top:76%;
+	font-size:45px;
+	font-family: futura;
+    font-style: italic;
+	background-color:blue;
+	color:red;
+	border:0px;
+	margin:0px;
+	cursor:pointer;
+	outline:none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+.end_multiplayer_goback:hover{
+	background-color:red;
+	color:blue;
+	box-shadow: inset 0 0 0 4px blue;
+}
+#end_multiplayer .esc_msg{
+	position:absolute;
+	margin:0;
+	top:90%;
+	left:43%;
+	size:15px;
+	color:black;
+	font-weight:600;
+}

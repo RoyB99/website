@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+/*main*/
+main article .s_2 .section_content .head {
+    color:#8a8a8a;
+    line-height:1em;
+    padding:0;
+    margin:0;
+    display:block;
+    font-size:.9em;
+}
+/*tagsList*/
+main article section .section_content .content .tags_list {
+	list-style:none;
+	font-size:0.6em;
+	padding:0;
+}
+main article .s_2 .section_content .content .tags_list {
+	font-size:1em;
+}
+main article section .section_content .content .tags_list li {
+	position:relative;
+	display:inline-block;
+    padding:6px 5px;
+    background-color:var(--secondaryColor);
+    color:var(--mainColor);
+    border-width:1px 1px 2px 1px;
+    border-style:solid;
+    border-color:var(--mainColor);
+    border-radius:3px;
+    font-family:MontSerrat,Tahoma,Arial,sans-serif;
+    font-weight:700;
+    box-shadow:1px 1px 0 var(--mainColor);
+    margin:3px;
+    cursor:pointer;
+    overflow:hidden;
+}
+main article section .section_content .content .tags_list li:hover {
+	border-width:1px 1px 1px 1px;
+	box-shadow:0;
+}
+/*tagsList*/
+/*projectsList*/
+main article section .section_content .content .projects_list {
+	display:flex;
+    flex-wrap:wrap;
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	font-family:"Sansita One", serif;
+	font-size:0.5em;
+}
+main article section .section_content .content .projects_list .projects_items {
+    margin:1em;
+    width:calc(50% - 2em);
+}
+main article section .section_content .content .projects_list .projects_items a {
+	display:block;
+	position:relative;
+	color:var(--secondaryColor);
+	text-decoration:none;
+    overflow:hidden;
+	z-index:8;
+}
+main article section .section_content .content .projects_list .projects_items a:hover .back_img_holder {
+	-webkit-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+}
+main article section .section_content .content .projects_list .projects_items a:hover .tags {
+	-webkit-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+}
+main article section .section_content .content .projects_list .projects_items .project_header {
+	width:100%;
+	padding:5px 0px;
+	background-color:var(--mainColor);
+	text-align:center;
+	vertical-align:middle;
+}
+main article section .section_content .content .projects_list .projects_items .project_header span {
+	height:12px;
+    width:12px;
+    display:inline-block;
+    background-color:var(--secondaryColor);
+    border-radius:50%;
+}
+main article section .section_content .content .projects_list .projects_items .project_main {
+	background-size:cover;
+    position:relative;
+    background-position:center center;
+    width:100%;
+    border-radius:0;
+}
+main article section .section_content .content .projects_list .projects_items .project_main:before {
+    content:"";
+    position:absolute;
+    z-index:20;
+    box-shadow:0 0 50px rgba(0,0,0,.75) inset;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .back_img_holder {
+	position:absolute;
+	width:100%;
+	z-index:2;
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform:scale(0);
+	-webkit-transition:.3s ease;
+	transition:.3s ease;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .back_img_holder:before {
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(10,10,10,.6);
+    background-blend-mode:luminosity;
+}
+main article section .section_content .content .projects_list .projects_items .project_main img {
+	object-fit:cover;
+	max-width:100%;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .tags {
+    opacity:1;
+    position:absolute;
+    text-align:left;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:4;
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform:scale(0);
+	-webkit-transition:.5s ease;
+	transition:.5s ease;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .tags div {
+    height:100%;
+    margin:0 auto;
+    width:80%;
+    display:-webkit-flex;
+    -webkit-align-items:center;
+    display:flex;
+    align-items:center;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .tags ul {
+    text-align:center;
+    position:relative;
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+main article section .section_content .content .projects_list .projects_items .project_main .front_img_holder {
+	display:flex;
+	width:100%;
+	z-index:6;
+	opacity:1;
+}
+@media screen and (max-width:1024px) {
+	main article section .section_content .content .projects_list .projects_items {
+		 width:calc(100% - 2em);
+	}
+}
+/*
+main article section .section_content .content .projects_list .projects_items .project_main .front_img_holder:before {
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(10,10,10,.7);
+    background-blend-mode:luminosity;
+	box-sizing:border-box;
+}*/
+/*
+main article section .section_content .content .projects_list .projects_items .project_main .overlay {
+	  position:relative;
+	  display:none;
+	  bottom:0;
+	  left:0;
+	  right:0;
+	  overflow:hidden;
+	  width:100%;
+	  height:100%;
+	  -webkit-transform:scale(0);
+	  -ms-transform:scale(0);
+	  transform:scale(0);
+	  -webkit-transition:.5s ease;
+	  transition:.5s ease;
+}
+.text {
+  color:white;
+  font-size:20px;
+  position:relative;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  -ms-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  text-align:center;
+}
+main article section .section_content .content .projects_list .projects_items:hover .overlay {
+  -webkit-transform:scale(1);
+  -ms-transform:scale(1);
+  transform:scale(1);
+}*/
+/*ojectsList*/
+/*main*/

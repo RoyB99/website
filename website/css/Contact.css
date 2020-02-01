@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+/*main*/
+main article section .section_content .content {
+	width:80%;
+	margin:0 auto 0 auto;
+	text-align:left;
+}
+main article section .section_content .content .content_email {
+	text-decoration:underline;
+}
+/*form*/
+main article section .section_content .form {
+	margin:0 auto 0 auto;
+	width:85%;
+	text-align:left;
+	/*disable element select*/
+	-webkit-touch-callout:none; /* iOS Safari */
+    -webkit-user-select:none; /* Safari */
+    -khtml-user-select:none; /* Konqueror HTML */
+    -moz-user-select:none; /* Old versions of Firefox */
+    -ms-user-select:none; /* Internet Explorer/Edge */
+    user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */ 
+	/*disable element select*/
+}
+main article section .section_content .form input {
+	width:calc(100% - 4px);
+	color:var(--mainColor);
+	background-color:#fafafa;
+	margin-bottom:0.8em;
+	padding:8px 0;
+	font-family:-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Helvetica,Arial,sans-serif;
+	font-size:18px;
+	font:400 18px -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Helvetica,Arial,sans-serif;
+	text-indent:8px;
+	border:1px solid #ababab;
+	/*border radius*/
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5x;
+	/*border radius*/
+	/*disable outlines*/
+	outline:0;
+	/*disable outlines*/
+}
+main article section .section_content .form input:focus {
+	background-color:transparent;
+}
+main article section .section_content .form .field_title {
+	width:100%;
+	display:block;
+	font-size:1.5em;
+	margin-bottom:8px;
+}
+main article section .section_content .form .name_holder .first_name,.last_name {
+	width:calc(50% - 0.5em);
+	display:inline-block;
+}
+main article section .section_content .form .name_holder .first_name {
+	margin-right:11px;
+}
+main article section .section_content .form .email_holder #email {
+	width:calc(100%-4px)
+}
+main article section .section_content .form select {
+	color:var(--mainColor);
+	background-color:transparent;
+	margin-bottom:0.8em;
+	font-family:-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Helvetica,Arial,sans-serif;
+	font-size:28px;
+	border:1px solid #ababab;
+	/*border radius*/
+	border-radius:2px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	/*border radius*/
+	/*disable outlines*/
+	outline:0;
+	/*disable outlines*/
+}
+main article section .section_content .form select option {
+	color:#888888;
+}
+main article section .section_content .form .email_holder {
+	width:100%;
+}
+main article section .section_content .form textarea {
+	width:calc(100% - 4px);
+	color:var(--mainColor);
+	background-color:#fafafa;
+	margin-bottom:0.8em;
+	padding:8px 0;
+	font-family:-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Helvetica,Arial,sans-serif;
+	font-size:18px;
+	text-indent:8px;
+	border:1px solid #ababab;
+	/*border radius*/
+	border-radius:2px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	/*border radius*/
+	/*disable outlines*/
+	outline:0;
+	/*disable outlines*/
+	-webkit-transition:all 160ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition:all 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+main article section .section_content .form textarea:focus {
+	background-color:transparent;
+}
+main article section .section_content .form input[type=submit] {
+	width:150px;
+	color:#888888;
+	text-indent:0px;
+	cursor:pointer;
+	padding:7px;
+	margin:0px;
+	border:2px solid #888888;
+	/*border radius*/
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	/*border radius*/
+}
+main article section .section_content .form input[type=submit]:hover {
+	color:var(--mainColor);
+	padding:5px 5px 5px 5px;	
+	margin:0px 4px 4px 0px;
+	border:2px solid var(--mainColor);
+}
+/*form*/
+/*main*/
+@media screen and (max-width:1024px) {
+	main article section .section_content .form {
+		width:100%;
+	}
+}

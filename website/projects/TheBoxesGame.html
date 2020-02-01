@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Boxes Game</title>
+			<link rel="icon" href="images/redboxicon.png" type="image/x-icon"/>
+    </head>
+    <body>
+			<!-- choose game type screen -->
+			<div id='choose_game_type'>
+				<p class='header'> The Boxes Game </p>
+				<div class='game_type_holder'>
+					<button class='singleplayer' onclick='showsingleplayer();'>Singleplayer</button>
+					</br>
+					<button class='multiplayer' onclick='showmultiplayer();'>Multiplayer</button>
+				</div>
+			</div>
+			
+			<!-- Single Player -->
+			<div id='start_singleplayer'>
+				<p class='header'> The Boxes Game </p>
+				<p class='choose_player'> Choose Player </p>
+				<div id='single_choose_player1'>
+					<div class='border' > </div>
+						<span class='single_p1_pic'></span> 
+						<span class='single_p1'>Player 1</span>	
+				</div>
+				<div>
+					<p id='single_p1_keys'> Keys </p>
+					<p id='single_p1_up'> W </p1>
+					<p>
+						<span id='single_p1_left'> A </span>
+						<span id='single_p1_down'> S </span>
+						<span id='single_p1_right'> D </span>
+					</p>
+				</div>
+				<div id='single_choose_player2'>
+					<span class='single_p2_pic'></span> 
+					<span class='single_p2'>Player 2</span>
+				</div>
+				<div>
+					<p id='p2_keys'> Keys </p>
+					<p id='p2_up'> &#8679; </p1>
+					<p>
+						<span id='p2_left'> &#8678; </span>
+						<span id='p2_down'>  &#8681; </span>
+						<span id='p2_right'> &#8680; </span>
+					</p>
+				</div>
+				<button class='start_multiplayer_button' onclick='startsinglegame();'>Start</button>
+				<button class='multiplayer_goback' onclick='singleplayer_goback();'> Back</button>
+				<p class='esc_msg' >Press Esc In Game To Go Back</p>
+			</div>
+			
+			<!-- Singleplayer Game Bar --> 
+			<div id='single_game_bar'>
+				<div class='single_game_bar_left_side'>
+					<p>
+						<span> score : </span>
+						<span id='player_score'>0</span>
+					</p>
+				</div>
+				<div id='timer' style='' >
+					<p id='inner_timer'>
+						<span id='single_minutes'>	0 </span>
+						<span>	: </span>
+						<span id='single_seconds'>	00 </span>
+					</p>
+				</div>
+				<div class='single_game_bar_right_side'>
+					<p>
+						<span> lives : </span>
+						<span id='player_lives'>3</span>
+					</p>
+				</div>
+			</div>
+			
+			<!-- End Singleplayer --> 
+			<div id='end_singleplayer'>
+				<p class='single_header' > Game Over </p>
+				<p class='single_score' >
+					<span> Score:</span>
+					<span id='single_score'> </span>
+				</p>
+				<p class='single_score' >
+					<span> Time:</span>
+					<span id='single_time'> </span>
+				</p>
+				<p class='single_end_buttons' >
+					<button class='single_play_again' onclick='startsinglegame();'>Play Again</button>
+					<br>
+					<p class='end_single_back_button'>
+						<button class='end_singleplayer_goback' onclick='end_singleplayer_goback();'> Back</button>
+					</p>
+				</p>
+			</div>
+			
+			<!-- MultiPlayer -->
+			<div id='start_multiplayer'>
+				<p class='header'> The Boxes Game </p>
+				<div>
+					<span class='p1_pic'></span> 
+					<span class='p1'>Player 1</span>
+				</div>
+				<div>
+					<span class='p1_name'>Name:</span>
+					<span><input type='text' id='p1name' maxlength='13' placeholder='Player 1' /></span>
+				</div>
+				<div>
+					<p id='p1_keys'> Keys </p>
+					<p id='p1_up'> W </p1>
+					<p>
+						<span id='p1_left' > A </span>
+						<span id='p1_down' > S </span>
+						<span id='p1_right' > D </span>
+					</p>
+				</div>
+				<div>
+					<span class='p2_pic'></span>
+					<span class='p2'>Player 2</span>
+				</div>
+				<div>
+					<span class='p2_name'>Name:</span>
+					<span><input type='text' id='p2name' maxlength='13' placeholder='Player 2'/></span>
+				</div>
+				<div>
+					<p id='p2_keys'> Keys </p>
+					<p id='p2_up'> &#8679; </p1>
+					<p>
+						<span id='p2_left' > &#8678; </span>
+						<span id='p2_down' >  &#8681; </span>
+						<span id='p2_right' > &#8680; </span>
+					</p>
+				</div>
+				<button class='start_multiplayer_button' onclick='startgamescreen();'>Start</button>
+				<button class='multiplayer_goback' onclick='multiplayer_goback();'> Back</button>
+				<p class='esc_msg' >Press Esc In Game To Go Back</p>
+			</div>
+			
+			<!-- Multiplayer Game Bar -->
+			<div id='game_bar' >
+				<span>
+					<div id='player1'>
+						<p id='p1_score'><span>Score:</span><span id='player1score'> 0 </span></p>
+						<p id='p1_name'><span> Player 1 </span></p>
+						<p id='p1_lives'><span>lives:</span><span id='player1lives'> 3 </span></p>
+					</div>
+				</span>
+				<div id='timer' style='' >
+					<p id='inner_timer'>
+						<span id='minutes'>	0 </span>
+						<span>	: </span>
+						<span id='seconds'>	00 </span>
+					</p>
+				</div>
+				<span>
+					<div id='player2' style=''>
+						<p id='p2_score'><span>Score:</span><span id='player2score'> 0 </span></p>
+						<p id='p2_lives'><span>lives:</span><span id='player2lives'> 3 </span></p>
+						<p id='p2_name'><span> Player 2 </span></p>
+					</div>
+				</span>
+			</div>
+			<!-- End Multiplayer -->
+			<div id='end_multiplayer'>
+				<div class='winner' >
+						<h1 id='winordraw'> </h1>
+						<p id='winner_name'></p>
+				</div>
+				<div id='player1_results'>
+					<input id='player1_name' maxlength='13' /> 
+					<p>
+						<span>Score: </span>
+						<span id='player1_end_score' ></span>
+					</p>
+					<p>
+						<span>Lives: </span>
+						<span id='player1_end_lives' ></span> 
+					</p>	
+				</div>
+				<div id='player2_results'>
+					<input id='player2_name' maxlength='13' />
+					<p>
+						<span>Score: </span>
+						<span id='player2_end_score' ></span>
+					</p>
+					<p>
+						<span>Lives: </span>
+						<span id='player2_end_lives' ></span> 
+					</p>
+				</div>
+				<button class='play_again' onclick='playagain();'>Play Again</button>
+				<button class='end_multiplayer_goback' onclick='end_multiplayer_goback();'> Back</button>
+			</div>
+			<script type="text/javascript" src="javascript/TheBoxesGame.js"> </script>
+			<link rel='stylesheet' href='css/TheBoxesGame.css' />
+    </body>
+</html>

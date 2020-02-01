@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+/*main*/
+main article .s_1 .head {
+	font-weight:400;
+}
+main article .s_1 .content {
+	width:50%;
+	max-width:480px;
+	margin:0px auto 0 auto;
+}
+main article .s_2 {
+	width:100%;
+}
+main article .s_2 .head {
+	font-size:2em;
+	font-weight:600;
+	text-align:left;
+}
+main article .s_2 .content {
+	text-align:left;
+}
+main article .s_2 .content ul {
+	list-style-type:none;
+}
+main article .s_2 .content ul li {
+
+}
+main article .s_3 {
+	width:100%;
+	padding-top:100px;
+	background:linear-gradient(to top,#fafafa,#ababab);
+	clip-path:polygon(0 0,100% 100px, 100% 100%,0 100% );
+	
+}
+main article .s_3 .header {
+	
+
+}
+main article .s_3 .content {
+	
+}
+main article .s_3 .content ul {
+	display:flex;
+    flex-wrap:wrap;
+	text-align:left;
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+
+}
+main article .s_3 .content ul li {
+	position:relative;
+	width:calc(50% - 2em);
+	margin:1em;
+	padding:0;
+
+}
+main article .s_3 .content ul li .list_img {
+	max-width:100%;
+	
+}
+main article .s_3 .content ul li .list_header {
+	
+	
+}
+
+main article .s_3 .content ul li .list_content {
+	text-align:left;
+
+}
+@media screen and (max-width:1024px) {
+	main article .s_1 {
+		padding-bottom:150px;
+	}
+}
+/*main*/
