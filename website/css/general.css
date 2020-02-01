@@ -279,12 +279,13 @@ header nav {
 	}
 	header .changeNav {
 		width:100%;
-		height:30%;
+		height:inherit;
 		margin:0px 0px 0px 0px;
 		padding:0px;
 	}
 	header #nav ul {
 		list-style-type:none;
+		height:inherit;
 		height:100%;
 		margin:0;
 		padding:0;
@@ -296,13 +297,10 @@ header nav {
 	}
 	header ul li {
 		position:relative;
-		height:33%;
-		/*background:linear-gradient(to bottom,#fafafa,#d0d0d0);*/
 		background-color:#fafafa;
 		margin:0;
 		display:block ;
 		text-align:center;
-		/*box-shadow:inset -2px -8px 2px -4px var(--mainColor);*/
 		border-bottom:2px solid var(--mainColor);
 	}
 	header #nav ul li .active{
@@ -311,9 +309,9 @@ header nav {
 	}
 	header #nav ul li a {
 		display:block; 
-		height:calc(100% - 70px);
+		height:100%;
+		padding:30px;
 		margin:0;
-		padding-top:70px;
 		color:var(--mainColor);
 		text-decoration:none;
 		border:inherit;
